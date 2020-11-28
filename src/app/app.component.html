@@ -3,5 +3,6 @@
   <img [src] = "imgUrl" (click)="onClick($event)" alt="logo"/>
 </div>
 <div>
-  <input [(ngModel)]="userName"/>
+  <input (input)="onInput($event)" [(ngModel)]="userName"/>
+  <span class="error-output">{{this.nameError}}</span>
 </div>
